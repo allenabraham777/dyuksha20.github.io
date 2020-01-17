@@ -1,0 +1,400 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/ico href=/static/favicon.ico><title>Dyuksha '20</title><style>@import url("https://fonts.googleapis.com/css?family=Blinker&display=swap");
+      body{
+        margin: 0 !important;
+        padding: 0;
+        background: linear-gradient(to bottom, #202020, #333333, #111119);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      #Preloader{
+        position: relative;
+        background:  #E4D8B4;
+        overflow: auto;
+        z-index: 3;
+      }
+      .great {
+        font-family: blinker;
+        position: absolute;
+        text-align: center;
+        bottom: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .radio {
+        height: 170px;
+        width: 322px;
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        animation: 0.8s jump infinite;
+      }
+      .row1 {
+        display: flex;
+      }
+      .row1 .bigbutton {
+        height: 6px;
+        width: 37px;
+        position: relative;
+        top: 30px;
+        left: 17px;
+        border-radius: 6px 6px 0 0;
+        border: 5px solid #543a4d;
+        border-bottom: 0;
+        background: #d20076;
+      }
+      .row1 .handle {
+        height: 30px;
+        width: 121px;
+        position: relative;
+        top: 7px;
+        left: 52px;
+        z-index: -1;
+        border-radius: 3px 3px 0 0;
+        border: 5px solid #543a4d;
+        box-shadow: 0 0 0 9px #903495, 0 0 0 14px #543a4d;
+      }
+      .row1 .handle::before {
+        display: block;
+        content: "";
+        height: 30px;
+        width: 121px;
+        position: relative;
+        top: -4px;
+        left: -16px;
+        z-index: -2;
+        border-radius: 3px 3px 0 0;
+        border: 5px solid #543a4d;
+        box-shadow: 0 0 0 9px #9239f6, 0 0 0 14px #543a4d;
+      }
+      .row1 .handle::after {
+        display: block;
+        content: "";
+        position: relative;
+        top: -50px;
+        height: 6px;
+        width: 100px;
+        background-image: repeating-linear-gradient(
+          to right,
+          #543a4d,
+          #543a4d 5px,
+          transparent 5px,
+          transparent 10px
+        );
+      }
+      .row1 .antenna {
+        height: 22px;
+        width: 5px;
+        position: relative;
+        top: 9px;
+        left: 86px;
+        background: #543a4d;
+      }
+      .row1 .antenna::before {
+        display: block;
+        content: "";
+        height: 15px;
+        width: 14px;
+        position: relative;
+        top: -14px;
+        left: -5px;
+        border-radius: 100%;
+        background: #543a4d;
+      }
+      .row1 .antenna::after {
+        display: block;
+        content: "";
+        height: 11px;
+        width: 25px;
+        position: relative;
+        top: 5px;
+        left: -9px;
+        box-sizing: border-box;
+        border-radius: 5px 5px 0 0;
+        border: 5px solid #543a4d;
+        border-bottom: 0;
+        background: #9239f6;
+      }
+      .row2 {
+        height: 36px;
+        width: 295px;
+        border-radius: 10px 10px 0 0;
+        box-sizing: border-box;
+        border: 5px solid #543a4d;
+        background: #d20076;
+      }
+      .row2::before {
+        display: block;
+        content: "";
+        height: 11px;
+        width: 11px;
+        position: relative;
+        top: 8px;
+        left: 25px;
+        border-radius: 100%;
+        background: #4a354f;
+      }
+      .row2::after {
+        display: block;
+        content: "";
+        height: 11px;
+        width: 11px;
+        position: relative;
+        top: -8px;
+        left: 250px;
+        border-radius: 100%;
+        background: #4a354f;
+      }
+      .row2 .channels {
+        height: 5px;
+        width: 200px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border-radius: 3px;
+        background: #543a4d;
+      }
+      .row2 .channels::before {
+        display: block;
+        content: "";
+        height: 16px;
+        width: 5px;
+        position: relative;
+        top: -5px;
+        left: 50px;
+        border-radius: 3px;
+        background: #543a4d;
+      }
+      .row3 {
+        display: flex;
+        height: 105px;
+        width: 295px;
+        border-radius: 0 0 10px 10px;
+        box-sizing: border-box;
+        border: 5px solid #543a4d;
+        border-top: 0;
+        background: #d20076;
+      }
+      .row3 .left {
+        height: 91px;
+        width: 91px;
+        border-radius: 0 0 0 5px;
+        border: 4px solid #ff6b58;
+      }
+      .row3 .left .speaker1 {
+        height: 81px;
+        width: 81px;
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border: 5px solid #543a4d;
+        border-radius: 100%;
+        animation: 0.8s beat infinite;
+        background: #ff6b58;
+      }
+      .row3 .left .speaker1::before {
+        display: block;
+        content: "";
+        height: 49px;
+        width: 49px;
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 100%;
+        box-sizing: border-box;
+        border: 5px solid #543a4d;
+        box-shadow: inset -7px 0 0 #903495;
+        background: #9239f6;
+      }
+      .row3 .middle {
+        height: 99px;
+        width: 87px;
+        background: #9239f6;
+        box-sizing: border-box;
+        border-left: 5px solid #543a4d;
+        border-right: 5px solid #543a4d;
+      }
+      .row3 .middle .window {
+        height: 40px;
+        width: 60px;
+        position: relative;
+        transform: translate(-50%, 0);
+        top: 8px;
+        left: 50%;
+        box-shadow: inset -5px -5px 0 -2px #903495;
+        box-sizing: border-box;
+        border: 5px solid #543a4d;
+        border-radius: 2px;
+        background: #4a354f;
+      }
+      .row3 .middle .stripes {
+        height: 21px;
+        width: 76px;
+        position: relative;
+        top: 17px;
+        left: 1px;
+        border-top: 5px solid #543a4d;
+        border-bottom: 5px solid #543a4d;
+        background: #c9523e;
+      }
+      .row3 .middle .stripes::before {
+        display: block;
+        content: "";
+        height: 10px;
+        width: 76px;
+        position: relative;
+        top: 1px;
+        background: #f8b660;
+      }
+      .row3 .middle .buttons {
+        height: 15px;
+        width: 16px;
+        position: relative;
+        top: 15px;
+        border-right: 5px solid #543a4d;
+      }
+      .row3 .middle .buttons::before {
+        display: block;
+        content: "";
+        position: relative;
+        left: 21px;
+        height: 15px;
+        width: 15px;
+        border-right: 5px solid #543a4d;
+      }
+      .row3 .middle .buttons::after {
+        display: block;
+        content: "";
+        position: relative;
+        top: -15px;
+        left: 41px;
+        height: 15px;
+        width: 15px;
+        border-right: 5px solid #543a4d;
+      }
+      .row3 .right {
+        height: 91px;
+        width: 91px;
+        border-radius: 0 0 5px 0;
+        border: 4px solid #ff6b58;
+      }
+      .row3 .right .speaker2 {
+        height: 81px;
+        width: 81px;
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        border: 5px solid #543a4d;
+        border-radius: 100%;
+        animation: 0.8s beat infinite;
+        background: #ff6b58;
+      }
+      .row3 .right .speaker2::before {
+        display: block;
+        content: "";
+        height: 49px;
+        width: 49px;
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 100%;
+        box-sizing: border-box;
+        border: 5px solid #543a4d;
+        box-shadow: inset -7px 0 0 #903495;
+        background: #9239f6;
+      }
+      .rightside {
+        height: 141px;
+        width: 31px;
+        position: absolute;
+        top: 40px;
+        right: 2px;
+        z-index: -1;
+        border-radius: 0 10px 10px 0;
+        box-sizing: border-box;
+        border: 5px solid #543a4d;
+        border-left: 0;
+        background: #903495;
+      }
+      .rightside .markings {
+        position: relative;
+        top: 11px;
+        right: -16px;
+        height: 21px;
+        width: 9px;
+        border-radius: 2px;
+        background: #4a354f;
+      }
+      .rightside .markings::before {
+        display: block;
+        content: "";
+        height: 70px;
+        width: 9px;
+        position: relative;
+        top: 40px;
+        background-image: repeating-linear-gradient(
+          #4a354f,
+          #4a354f 5px,
+          transparent 5px,
+          transparent 10px
+        );
+      }
+      .shadow {
+        position: absolute;
+        bottom: 40%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        height: 35px;
+        width: 370px;
+        z-index: -1;
+        opacity: 0.2;
+        border-radius: 100%;
+        animation: 0.8s shrink infinite;
+        background: #9239f6;
+      }
+      @keyframes beat {
+        5% {
+          transform: translate(-50%, -50%);
+        }
+        24% {
+          transform: translate(-50%, -50%) scale(1.06);
+        }
+        41% {
+          transform: translate(-50%, -50%);
+        }
+      }
+      @keyframes jump {
+        0% {
+          transform: translate(-50%, 0);
+        }
+        50% {
+          transition-timing-function: ease-in;
+          transform: translate(-50%, -8%);
+        }
+        100% {
+          transform: translate(-50%, 0);
+        }
+      }
+      @keyframes shrink {
+        0% {
+          transform: translate(-50%, 0);
+        }
+        50% {
+          transition-timing-function: ease-in;
+          transform: translate(-50%, 0%) scale(0.93, 0.9);
+        }
+        100% {
+          transform: translate(-50%, 0);
+        }
+      }</style><link href=/static/css/app.7d8939c534123352aa8257a2342afab7.css rel=stylesheet></head><body onload="document.getElementById('Preloader').style.display = 'none';"><div id=Preloader><div class=radio><div class=row1><div class=bigbutton></div><div class=handle></div><div class=antenna></div></div><div class=row2><div class=channels></div></div><div class=row3><div class=left><div class=speaker1></div></div><div class=middle><div class=window></div><div class=stripes></div><div class=buttons></div></div><div class=right><div class=speaker2></div></div></div><div class=rightside><div class=markings></div></div></div><div class=shadow></div><h1 class=great>It's Retro This Time</h1></div><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.d5a1143ab8cd9ac6d9ab.js></script><script type=text/javascript src=/static/js/app.f20d1d203a269b157daa.js></script></body></html>
